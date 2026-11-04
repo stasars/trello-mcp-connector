@@ -145,13 +145,10 @@ what's currently loaded.
 
 ## Optional: the `/trello-update` slash command
 
-There's a Claude Code skill that lets you say *"move card X to QA"* and have
-Claude move the card to the matching list by status. It is **not** bundled in
-this repo — ask Stas for the `SKILL.md`, then place it at:
-
-```
-~/.claude/skills/trello-update/SKILL.md
-```
+The `skills/trello-update/SKILL.md` skill lets you say *"move card X to QA"* and have
+Claude Code or OpenCode move the card to the matching list by status. Running `./install.sh`
+automatically installs it into `~/.claude/skills/trello-update/SKILL.md` and registers `skills/`
+in `~/.config/opencode/opencode.json`.
 
 The `move_card_by_status` MCP tool works without the skill; the skill is just a
 convenience wrapper around it.

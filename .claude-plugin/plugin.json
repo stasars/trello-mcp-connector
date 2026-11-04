@@ -1,0 +1,12 @@
+{
+  "name": "trello",
+  "version": "0.1.0",
+  "description": "Trello MCP connector and /trello-update workflow skill for Claude Code and OpenCode.",
+  "author": {
+    "name": "Stas Arshanski",
+    "email": "stas@kolivri.com",
+    "url": "https://kolivri.com"
+  },
+  "homepage": "https://github.com/stasars/trello-mcp-connector",
+  "keywords": ["trello", "mcp", "claude-code", "opencode", "productivity"]
+}

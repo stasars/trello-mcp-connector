@@ -1,7 +1,7 @@
 # trello-mcp-connector
 
 A Model Context Protocol server that exposes Trello (boards, lists, cards, and
-webhooks) to any MCP client — including Claude Code. Authentication is OAuth
+webhooks) to any MCP client — including **Claude Code** and **OpenCode**. Authentication is OAuth
 1.0a, so the connector never sees a long-lived personal API token and the user
 can revoke access at any time from the Trello account settings.
 
@@ -56,10 +56,15 @@ The server speaks JSON-RPC on stdio, which is what every MCP client expects.
 node dist/index.js
 ```
 
-### Wiring it into Claude Code
+### Wiring it into Claude Code & OpenCode
 
-Add an entry to your MCP config (`~/.claude.json` or the project-local
-equivalent):
+Run the unified installer to register the `trello` MCP server and `/trello-update` skill in both Claude Code and OpenCode:
+
+```sh
+./install.sh
+```
+
+Or add it manually to Claude Code (`~/.claude.json`):
 
 ```json
 {
@@ -67,6 +72,20 @@ equivalent):
     "trello": {
       "command": "node",
       "args": ["/absolute/path/to/trello-connector-claude-code/dist/index.js"]
+    }
+  }
+}
+```
+
+And in OpenCode (`~/.config/opencode/opencode.json`):
+
+```json
+{
+  "mcp": {
+    "trello": {
+      "type": "local",
+      "command": ["node", "/absolute/path/to/trello-connector-claude-code/dist/index.js"],
+      "enabled": true
     }
   }
 }

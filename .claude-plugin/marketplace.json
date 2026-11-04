@@ -1,0 +1,26 @@
+{
+  "name": "trello-mcp-connector",
+  "owner": {
+    "name": "Stas Arshanski",
+    "email": "stas@kolivri.com",
+    "url": "https://kolivri.com"
+  },
+  "metadata": {
+    "description": "Trello MCP connector and /trello-update skill for Claude Code and OpenCode.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "trello",
+      "source": "./",
+      "description": "Trello MCP connector and /trello-update workflow skill for Claude Code and OpenCode.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Stas Arshanski",
+        "email": "stas@kolivri.com",
+        "url": "https://kolivri.com"
+      },
+      "category": "productivity"
+    }
+  ]
+}

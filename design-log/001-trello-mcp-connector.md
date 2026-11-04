@@ -186,3 +186,8 @@ Allowed Origins list.
 on Trello's app-key page is not "still functional today." The wildcard `*`
 in Allowed Origins has been enforced. Any local OAuth callback must use a
 fixed port that's registered as an exact origin.
+
+### Dual Claude Code + OpenCode Support
+
+- Bundled `skills/trello-update/SKILL.md`, `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `.mcp.json`, and `install.sh` to configure both Claude Code and OpenCode (`~/.config/opencode/opencode.json` `mcp.trello` and `skills.paths`).
+- Added `tests/install.test.ts` verifying the manifests and isolated `HOME` installation.
