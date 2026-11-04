@@ -10,6 +10,11 @@ OPENCODE_JSON="$OPENCODE_DIR/opencode.json"
 echo "trello-mcp-connector — Dual Installer (Claude Code + OpenCode)"
 echo "=============================================================="
 
+if [ ! -f "$ENTRY" ]; then
+  echo "Building dist/index.js..."
+  (cd "$SCRIPT_DIR" && npm run build)
+fi
+
 # 1. Install skill for Claude Code
 mkdir -p "$CLAUDE_SKILL_DIR"
 cp "$SCRIPT_DIR/skills/trello-update/SKILL.md" "$CLAUDE_SKILL_DIR/SKILL.md"
