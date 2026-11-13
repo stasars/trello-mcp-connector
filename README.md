@@ -1,3 +1,5 @@
+> 🚀 **Official Verified Skill on Agensi (Launch Deal: $9.99 — 33% Off)**: [Install the **Trello Workflow & Status Sync MCP Skill** on Agensi](https://www.agensi.io/skills/trello-workflow-status-sync-mcp-connector) or grab the [**Claude Code & MCP Productivity Suite Bundle (Trello + Notes)** for $16.99](https://www.agensi.io/creators/stas-arshanski).
+
 # trello-mcp-connector
 
 A Model Context Protocol server that exposes Trello (boards, lists, cards, and
